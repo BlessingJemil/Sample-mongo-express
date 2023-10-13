@@ -16,7 +16,9 @@ app.use(bodyParser.json());
 app.listen(5000, () => {
     console.log('sever listening on port:5000');
 });
-
+app.get('/',function(req,res){
+  res.send('Welcome')
+});
 // Connecting to DB
 mongoose.connect('mongodb+srv://blessingjemil:lY8uxy3W0h271woB@cluster0.klusmyu.mongodb.net/', {useNewUrlParser: true, useUnifiedTopology: true
 }).then(() => {
